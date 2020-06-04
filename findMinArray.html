@@ -8,22 +8,36 @@
 
 <body>
 <script>
-let arr1 = [3, 5, 1, 8, -3, 7, 8];
 
-let arr2 = [7, 12, 6, 9, -20, 56, 89];
-
-let arr3 = [];
-
-let arr4 = [0, 0, 0, 0, 0, 0];
-
-
-
+// // 1
+// let arr1 = [3, 5, 1, 8, -3, 7, 8];
 
 // let max = Math.max.apply(Math, arr1 );
-// let min = Math.min.apply(Math, arr2);
+// let min = Math.min.apply(Math, arr1);
 // console.log(max);
 // console.log(min);
 
+
+function myFunction(){
+    //truy xuất độ dài của đối tượng arguments
+    let n = +prompt("input length of array");
+    arguments.length = n;
+
+    for (let i = 0; i < n; i++) {
+        arguments[i] = +prompt(`Input ${arguments[i]} element at index ${i}`);
+        console.log(arguments[i]);
+    }
+
+    let min = arguments[0];
+    for(var i = 1; i < n; i++) {
+        if(min > arguments[i]) {
+            min = arguments[i];
+        }
+    }
+    alert(min);
+}
+
+myFunction();
 
 </script>
 </body>
