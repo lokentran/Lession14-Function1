@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train</title>
+</head>
+<body>
+
+    <p>Square of <input type="text " id="input-value" oninput="calculate()"> is <span id="result" ></span> </p>
+
+    <script>
+        function square(a) {
+            return a**2;
+        }
+
+        function calculate() {
+            let value = +document.getElementById('input-value').value;
+            let result = square(value);
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

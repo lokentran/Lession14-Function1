@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert temperature</title>
+</head>
+<body>
+    <p>F: <input type="number" name="" id="num" oninput="convertTemperature()"></p>
+    <p>C: <span id="result"></span></p>
+<script>
+
+function convertTemperature() {
+    let valueF = +document.getElementById('num').value;
+    let resultC = (valueF - 32)/1.8;
+    document.getElementById('result').innerHTML = resultC;
+}
+
+</script>
+</body>
+</html>
